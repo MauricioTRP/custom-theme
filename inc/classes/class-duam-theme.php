@@ -13,10 +13,15 @@ class DUAM_THEME {
 	use Singleton;
 
 	protected function __construct() {
+		// classes load
+		Assets::get_instance();
+
 		$this->setup_hooks();
 	}
 
 	protected function setup_hooks() {
-
+		/**
+		 * Actions
+		 */
 	}
 }
