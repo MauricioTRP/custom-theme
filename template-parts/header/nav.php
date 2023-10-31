@@ -2,7 +2,7 @@
 /**
  * Header navigation template
  * 
- * @custom-theme
+ * @duam-theme
  */
 
  ?>

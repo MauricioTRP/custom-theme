@@ -2,7 +2,7 @@
 /**
  * Footer template
  * 
- * @package custom-theme
+ * @package Duam
  */
 ?>
         <footer>Pie</footer>

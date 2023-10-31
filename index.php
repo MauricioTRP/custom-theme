@@ -2,7 +2,7 @@
 /**
  * Main template file
  * 
- * @package custom-theme
+ * @package Duam
  */
 ?>
 

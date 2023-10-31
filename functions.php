@@ -2,8 +2,19 @@
 /**
  * Theme functions
  * 
- * @package custom-theme
+ * @package Duam
  */
+
+
+//  Defines root directory as DUAM_DIR_PATH
+if ( ! defined( 'DUAM_DIR_PATH' ) ) {
+    define('DUAM_DIR_PATH', untrailingslashit( get_template_directory() ) );
+}
+
+
+ require_once DUAM_DIR_PATH . '/inc/helpers/autoloader.php';
+
+\DUAM_THEME\Inc\DUAM_THEME::get_instance();
 
 function custom_theme_scripts() {
     // Register Styles
@@ -24,5 +35,3 @@ function custom_theme_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'custom_theme_scripts' );
-
-?>
