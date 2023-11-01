@@ -46,7 +46,7 @@ $header_menus = wp_get_nav_menu_items( $menu_id );
                   <li class="nav-item">
                     <a 
                       class = "nav-link" 
-                      href  = "<?php echo esc_url( $menu_id->url ); ?>"
+                      href  = "<?php echo esc_url( $menu_item->url ); ?>"
                       target= "<?php echo esc_attr( $link_target ); ?>"
                       title = "<?php echo esc_attr( $menu_item->title ); ?>"
                     >
