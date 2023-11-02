@@ -17,6 +17,7 @@ if ( ! defined( 'DUAM_DIR_URI' ) ) {
 
 
  require_once DUAM_DIR_PATH . '/inc/helpers/autoloader.php';
+ require_once DUAM_DIR_PATH . '/inc/helpers/template-tags.php';
 
  function duam_get_theme_instance() {
     \DUAM_THEME\Inc\DUAM_THEME::get_instance();
