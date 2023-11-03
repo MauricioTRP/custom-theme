@@ -28,7 +28,7 @@ class Assets {
 	public function register_styles() {
 	    // Register Styles
 		wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime( DUAM_DIR_URI . '/style.css' ), 'all' );
-		wp_register_style( 'bootstrap-css', DUAM_DIR_URI . '/assets/src/library/scss/styles.scss', [], false , 'all' );
+		wp_register_style( 'bootstrap-css', DUAM_DIR_URI . '/assets/src/library/main.css', [], false , 'all' );
 	
 		// Enqueue Styles
 		wp_enqueue_style( 'style-css' );

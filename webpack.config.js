@@ -1,9 +1,8 @@
 'use strict'
 
-'use strict'
-
 const path = require('path')
 const autoprefixer = require('autoprefixer')
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
@@ -12,14 +11,20 @@ module.exports = {
     filename: 'bootstrap.min.js',
     path: path.resolve(__dirname, 'assets/src/library')
   },
+  plugins: [
+    new miniCssExtractPlugin()
+  ],
     module: {
     rules: [
       {
-        test: /\.(scss)$/,
+        test: /\.(css|scss)$/,
         use: [
           {
-            // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
+            // extracts css for each JS file that includes CSS
+            loader: miniCssExtractPlugin.loader,
+            options: {
+              publicPath: path.resolve(__dirname, 'assets/src/library')
+            }
           },
           {
             // Interprets `@import` and `url()` like `import/require()` and will resolve them
