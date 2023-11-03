@@ -22,32 +22,14 @@
                 <?php
               }
             ?>
-            <div class="row">
+            <div class="grid">
               <?php
-                $index = 0;
-                $no_of_columns = 3;
 
                 // Start the loop
                 while ( have_posts() ) : the_post();
-
-                // Opens html col tag
-                  if ( 0 === $index % $no_of_columns ) {
-                    ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                      <?php
-                  }
-                  // Post content
-
+                  
                   get_template_part( 'template-parts/content' );
 
-                  $index ++;
-                // Closes html tag
-                if ( 0 !== $index && 0 === $index % $no_of_columns ) {
-                  ?>
-                    </div>
-                  <?php
-                  }
-                  
                 endwhile;
               ?>
             </div>

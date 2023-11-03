@@ -12,7 +12,7 @@ $the_post_id = get_the_ID();
         // Featured image
         if ( has_post_thumbnail( $the_post_id ) ) :
         ?>
-            <a href="<?php the_permalink( $the_post_id ); ?>" class="d-flex">
+            <a href="<?php the_permalink( $the_post_id ); ?>">
                 <?php 
                 // Custom helper to get responsive thumbnail
                 the_post_custom_thumbnail( 
