@@ -5,6 +5,8 @@
  * @package duam
  */
 $the_post_id = get_the_ID();
+$hide_title = get_post_meta( $the_post_id, '_hide_page_title', true );
+$heading_class = !empty( $hide_title ) && 'yes' === $hide_title ? 'd-none' : '';
 ?>
 
 <header class="entry-header">
@@ -27,5 +29,19 @@ $the_post_id = get_the_ID();
             </a>
         <?php
         endif;
+        // Title
+        if ( is_single() || is_page() ) {
+            printf(
+                '<h1 class="page-title h1 %1s">%2s</h1>',
+                esc_attr( $heading_class ),
+                wp_kses_post( get_the_title() )
+            );
+        } else {
+            printf(
+                '<h4 class="entry-title"><a class="text-body-secondary" href="%1s">%2s</a></h1>',
+                esc_url( get_the_permalink() ),
+                wp_kses_post( get_the_title() )
+            );
+        }
     ?>
 </header>

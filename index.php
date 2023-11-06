@@ -10,10 +10,10 @@
 
 
   <div class="primary">
-    <main id="main" class="site-main mt-5" role="main">
-      <?php
+    <?php
         if ( have_posts() ) :
           ?>
+          <main id="main" class="site-main mt-5" role="main">
           <div class="container">
             <?php
               if ( ! is_front_page() && is_home() ) {
